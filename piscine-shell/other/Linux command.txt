@@ -1,0 +1,18 @@
+pwd  (check your path)
+ls 
+   ls-a    (看你現在有的檔案包括隱藏的) 
+    ls -l   (show more info)
+mkdir (create a file / directory )
+cd /  (navigate the actual route)
+nano 檔名 （在nano中做文字編輯）
+cat 檔名 (see the content or the file)
+mv 要更名的檔案 要改的檔案名稱 （改檔案名稱刪掉檔案）
+cp 要複製的檔案 複製好的檔案的名字 （複製檔案並取名）
+rm 檔案名。（刪掉檔案）
+rmdir 檔案夾名 （刪掉資料夾） ; rm -r （如果資料夾有檔案就用這個指令）
+which 查路徑
+uname。顯示作業系統等
+sudo apt-get install 要安裝的檔案
+sudo apt-get  remove 要卸載的檔案
+sudo shutdown -h
+<script src="https://gist.github.com/bradtraversy/cc180de0edee05075a6139e42d5f28ce.js"></script>
