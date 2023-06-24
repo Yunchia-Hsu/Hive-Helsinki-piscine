@@ -1,0 +1,2 @@
+https://www.calcomsoftware.com/kerberos-tickets-and-authentication-in-active-directory/
+create HHS : ssh-keygen 
