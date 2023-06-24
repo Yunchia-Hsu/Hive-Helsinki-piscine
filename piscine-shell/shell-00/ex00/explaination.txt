@@ -1,4 +1,4 @@
-
+- create a folder  mkdir 
 - create a file 	 touch z
 - open the file 	 vim z
 - type i to be in "INSERT mode"
