@@ -1,3 +1,5 @@
+ls -tUmp
+
 Take a look at the 	man ls
 手冊頁面通常由幾個部分組成，例如：
 
