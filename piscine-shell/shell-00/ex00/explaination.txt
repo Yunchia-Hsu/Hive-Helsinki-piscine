@@ -5,3 +5,13 @@
 - write Z
 - leave vim with	 Shift 或是:wq  (要先est回到nornal mode )
 - :qa!     強制執行退出vim 
+ls -l 的作用
+eg:
+drwxr-xr-x   8 sandy567sh  staff   256  6 22 19:37 Piscine-42 
+說明：d目錄 rwx 擁有者可以r讀取w寫入x執行 -wx 所屬組權限 讀和執行  最後是其他用戶的權限 也是讀和執行 8是指hard link的數目
+-rw-r--r--   1 sandy567sh  staff    27  6 22 20:23 sandy
+說明：-代表 檔案 
+chmod 如果用touch來創檔案 並不能執行此檔案，所以要改變 permission 
+chmod +x hello.sh
+$BASH.   $加大寫字母 就是系統變數 （引用變數都是用錢字號）
+value=10.   使用者設定的辨數直接小寫接等號=。（引用變數都是用錢字號）
