@@ -1,0 +1,3 @@
+Take a look at the git log man
+man git
+git log --pretty=%H | head -n 5
