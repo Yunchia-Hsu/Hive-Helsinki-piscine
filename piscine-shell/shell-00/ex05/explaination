@@ -1,3 +1,12 @@
 Take a look at the git log man
 man git
 git log --pretty=%H | head -n 5
+這個命令 git log --pretty=%H | head -n 5 是用於顯示 Git 倉庫中最新的 5 個提交的哈希值（commit hash）。
+
+解釋每個部分：
+
+git log 是 Git 命令，用於查看提交歷史。
+--pretty=%H 是一個選項，用於指定日誌輸出格式。在這裡，%H 表示只顯示提交的完整哈希值。
+| 是管道符號，用於將 git log 的輸出傳遞給下一個命令。
+head -n 5 是一個命令，用於從輸入中選取前 5 行。這裡的輸入來自前一個命令的輸出，即 git log 的提交哈希值。
+因此，git log --pretty=%H | head -n 5 的作用是從 Git 倉庫的提交歷史中獲取最新的 5 個提交的哈希值，並將其顯示在終端上。
