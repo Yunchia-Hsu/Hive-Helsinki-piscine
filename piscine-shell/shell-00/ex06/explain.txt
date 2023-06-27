@@ -1,0 +1,2 @@
+git check-ignore *
+git ignore  is somewhere you can ignore when you git push sth, so use this shell script you can checked all hided files 
