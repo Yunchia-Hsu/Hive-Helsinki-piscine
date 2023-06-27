@@ -1,5 +1,8 @@
-ls -tUmp
-
+ls -lt -m -F
+   -lt (sorted by time modified)
+   -m (list files across the page and separated by commas)
+   -F (Display a slash (`/') immediately after each pathname)
+  
 Take a look at the 	man ls
 手冊頁面通常由幾個部分組成，例如：
 
