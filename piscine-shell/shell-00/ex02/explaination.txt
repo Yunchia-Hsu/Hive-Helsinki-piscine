@@ -1,0 +1,7 @@
+need to change permission / link the files have / byte the file or folder takes /change modified time 
+need to change permission: 
+  chmod o+w filename    
+  chmod -h g=w filename (change original symlink file permission insteead of the linked file )
+byte the file or folder takes:
+   touch -t time to want to setup 
+   touch -h -t time to want to setup (change original symlink file permission insteead of the linked file )
