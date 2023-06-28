@@ -1,0 +1,3 @@
+create a file called touch "\?$*’MaRViN’*$?\"
+
+touch '"\?$*’MaRViN’*$?\"'    (add single quote)
