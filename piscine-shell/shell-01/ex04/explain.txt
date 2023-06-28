@@ -1,0 +1,3 @@
+find $PWD \( -type f -or -type d \) -name ".*" -prune -o -print | wc -l
+  type file firectory
+   -prune to skip files and directories starting with . (hidden file)
