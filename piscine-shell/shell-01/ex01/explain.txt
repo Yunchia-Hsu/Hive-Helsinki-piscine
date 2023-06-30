@@ -1,3 +1,5 @@
+id -G -n $FT_USER | tr ' ' ',' | tr -d '\n'     這是對的
+
 id -Gn $FT_USER | tr ' ' ',' 
 The historic groups(1) command is equivalent to ``id -Gn [user]''. the user here is FT_USER this environment variable
   'FT_USER' - is environment variable which is usually used to save user id
