@@ -1,4 +1,4 @@
-ifconfig -a | grep ether | sed 's/ether//g' | sed 's/[[:space:]]//g'
+ifconfig -a | grep 'ether ' | sed 's/ether//g' | sed 's/[[:space:]]//g'
 让我们逐个解释每个命令的作用：
 
 ifconfig -a: 这个命令用于显示所有网络接口的配置信息。-a选项表示显示所有接口，包括未激活的接口。
