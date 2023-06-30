@@ -1,8 +1,2 @@
 
-
-find $PWD \( -type f -or -type d \) -name ".*" -prune -o -print | wc -l
-$PWD  is an environment variable   
-type file firectory
-   -prune to skip files and directories starting with . (hidden file)
-  -o is sed to connect 2 functions  
- wc -l   count the lines
+ifconfig -a | grep ether | sed 's/ether//g' | sed 's/[[:space:]]//g'
