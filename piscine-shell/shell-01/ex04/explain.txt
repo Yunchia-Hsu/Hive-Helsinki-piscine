@@ -1,3 +1,5 @@
+
+
 find $PWD \( -type f -or -type d \) -name ".*" -prune -o -print | wc -l
 $PWD  is an environment variable   
 type file firectory
