@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+ void ft_div_mod(int a, int b, int *div, int *mod)
+ {
+    int result;
+    int remain;
+    
+    remain = a % b;
+    result = a / b;
+   
+    *mod = remain;
+    *div = result; 
+ }
+
+int main() 
+{
+    int res;
+    int rem;
+    
+    int *m = &res;
+    int *n = &rem;
+    
+    
+    ft_div_mod(26, 10, m, n);
+    
+    printf("%d, %d", res, rem);
+ 
+    return 0;
+}
