@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+ft_swap(int *a, int *b)
+{
+    int	temp;
+    
+    temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+
+int main() 
+{
+    int x;
+    int y;
+    int *a;
+    int *b;
+    
+    x = 5;
+    y = 7;
+    a = &x;
+    b = &y;
+    ft_swap(a, b);
+    
+    
+    printf("%i\n ", x);
+    
+    return 0;
+}
