@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+
+int main(void)
+{
+    char    str[] = "salut, comment tu vas ? 42mots quarante-deux; cinquante+et+un";
+    int j;
+    
+    j = 0;
+    while (str[j] != '\0')
+    {
+        if (j == 0)
+        {
+            str[j] = str[j] - 32;
+        }
+        
+        if (str[j] >= 32 && str[j] <= 47)    //32 space + printable characters  
+        {
+            if (str[j+1] >= 'a' && str[j+1] <= 'z' )
+            {
+                str[j + 1] = str[j + 1] - 32;
+            }
+            
+        }
+        
+        if (str[j] >= 58 && str[j] <= 64)  // printable characters   
+        {
+            if (str[j+1] >= 'a' && str[j+1] <= 'z' )
+            {
+                str[j + 1] = str[j + 1] - 32;
+            }
+            
+        }
+        j++;
+    }
+    
+    printf("%s", str);
+    return 0;
+}
