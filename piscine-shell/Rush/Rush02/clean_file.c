@@ -25,7 +25,7 @@ int	*fill_keys(char *buffer)
 			i++;
 			if (buffer[i] != '\n')
 			{
-				key[j] = ft_atoi(buffer + i);
+				key[j] = ft_atoi(buffer + i); //buffer + i 是什麼
 				j++;
 			}
 		}
@@ -41,13 +41,13 @@ char	**fill_values(char *buffer, int i, int j, int k)
 	text = malloc(1000);
 	while (buffer[i])
 	{
-		text[k] = malloc(1000);
+		text[k] = malloc(1000); //為什麼兩次
 		if (buffer[i] == ':')
 		{
 			i++;
 			while (buffer[i] != '\n')
 			{
-				if (buffer[i] != count_rows(buffer))
+				if (buffer[i] != count_rows(buffer))  // count_rows(buffer)是什麼
 				{
 					text[k][j] = buffer[i];
 					j++;
@@ -73,7 +73,7 @@ char	**ini(char *buffer)
 	i = 0;
 	j = 0;
 	k = 0;
-	text = fill_values(buffer, i, j, k);
+	text = fill_values(buffer, i, j, k); //為什麼要把value存到這裡text，可以直接使用嗎
 	return (text);
 }
 
