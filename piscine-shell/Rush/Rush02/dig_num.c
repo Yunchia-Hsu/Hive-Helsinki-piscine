@@ -1,4 +1,4 @@
-int	dig_num(int num)
+int	dig_num(int num)  //計算是輸入的數字有幾位數  為什麼要這樣用？
 {
 	int	i;
 
@@ -11,7 +11,7 @@ int	dig_num(int num)
 	return (i);
 }
 
-int	count_rows(char *buffer)
+int	count_rows(char *buffer)  //計算字串的數量 
 {
 	int	i;
 	int	count;
