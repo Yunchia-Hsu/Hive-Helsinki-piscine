@@ -1,8 +1,8 @@
 int	ft_atoi(char *str)
 {
-	int	i;
-	int	j;
-	int	x;
+	int	i;  
+	int	j;  //把字母轉成數字
+	int	x;  //計算-有幾個
 
 	i = 0;
 	x = 0;
