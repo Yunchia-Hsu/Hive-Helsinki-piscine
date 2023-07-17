@@ -14,7 +14,7 @@ int	valid_a(char *str)
 			return (0);
 		i++;
 	}
-	if (i > 37)
+	if (i > 37)        //在valid_a 函式，為什麼要檢查字串的長度是否超過 37
 		return (0);
 	return (1);
 }
