@@ -25,7 +25,7 @@ int	*fill_keys(char *buffer)
 			i++;
 			if (buffer[i] != '\n')
 			{
-				key[j] = ft_atoi(buffer + i); //buffer + i 是什麼   要改成+1
+				key[j] = ft_atoi(buffer + i); //buffer + i 是什麼   (要改成+1)
 				j++;
 			}
 		}
@@ -47,7 +47,7 @@ char	**fill_values(char *buffer, int i, int j, int k)
 			i++;
 			while (buffer[i] != '\n')
 			{
-				if (buffer[i] != count_rows(buffer))  // count_rows(buffer)是什麼
+				if (buffer[i] != count_rows(buffer))  // count_rows(buffer)是什麼 (should change to buffer[i] != 32)
 				{
 					text[k][j] = buffer[i];
 					j++;
