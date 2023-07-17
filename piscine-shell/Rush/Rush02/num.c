@@ -53,14 +53,14 @@ void	modu_2(long int num, int *key, int c, char **value)
 	if (d <= 20 && d > 9)
 	{
 		check(d, key, value);
-		if (c > 2)
+		if (c > 2)    // 確認非最後兩位數
 			check(rec_pow(10, c - 2), key, value);
 		c--;
 	}
 	else
 	{
 		if (d - d % rec_pow(10, 1) != 0)
-			check(d - d % rec_pow(10, 1), key, value);
+			check(d - d % rec_pow(10, 1), key, value);  // 如果大於20就去除最面一位數 找出英文字
 	}
 }
 
