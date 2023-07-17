@@ -25,7 +25,7 @@ int	*fill_keys(char *buffer)
 			i++;
 			if (buffer[i] != '\n')
 			{
-				key[j] = ft_atoi(buffer + i); //buffer + i 是什麼
+				key[j] = ft_atoi(buffer + i); //buffer + i 是什麼   要改成+1
 				j++;
 			}
 		}
