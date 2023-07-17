@@ -41,7 +41,7 @@ char	**fill_values(char *buffer, int i, int j, int k)
 	text = malloc(1000);
 	while (buffer[i])
 	{
-		text[k] = malloc(1000); //為什麼兩次
+		text[k] = malloc(1000); //為什麼兩次 因為上面是為全體配置記憶體空間 ，這邊是為每個小字母
 		if (buffer[i] == ':')
 		{
 			i++;
