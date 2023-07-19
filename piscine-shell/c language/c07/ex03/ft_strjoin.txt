@@ -1,0 +1,96 @@
+#include <stdlib.h>
+
+int	ft_strlen(char *str)
+{
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	{
+		i++;
+	}
+	return (i);
+}
+
+char	*ft_strcat(char *dest, char *src)
+{
+	int	i;
+	int	j;
+
+	i = 0;
+	j = 0;
+	while (dest[i] != '\0')
+		i++;
+	while (src[j] != '\0')
+	{
+		dest[i + j] = src[j];
+		j++;
+	}
+	dest[i + j] = '\0';
+	return (dest);
+}
+
+int	ft_strings_size(char **strs, int size)
+{
+	int	i;
+	int	stringssize;
+
+	i = 0;
+	stringssize = 0;
+	while (i < size)
+	{
+		stringssize = stringssize + ft_strlen(strs[i]);
+		i++;
+	}
+	return (stringssize);
+}	
+
+char	*ft_strjoin(int size, char **strs, char *sep)
+{
+	int		sep_size;
+	int		strings_size;
+	char	*result;
+	int		i;
+
+	sep_size = ft_strlen(sep) * (size - 1);
+	if (size == 0)
+		return (malloc(0));
+	strings_size = ft_strings_size(strs, size);
+	result = (char *)malloc((sep_size + strings_size) * sizeof(char) + 1);
+	result[0] = '\0';
+	i = 0;
+	while (i < size)
+	{
+		ft_strcat(result, strs[i]);
+		if (i < size -1)
+			ft_strcat(result, sep);
+		i++;
+	}
+	return (result);
+}
+
+#include <stdio.h>
+#include <stdlib.h>
+
+char *ft_strjoin(int size, char **strs, char *sep);
+
+int main()
+{
+     char *strings[4];
+     char *sep;
+     
+    strings[0] = "the";
+    strings[1] = "";
+    strings[2] = "coding";
+    strings[3] = "school";
+    
+  //  char ** stringstring;
+   // stringstring =  strings;
+   // *stringstring = (char *)malloc(14 * sizeof(char));
+    
+     sep = " ";
+     char * result = ft_strjoin(4, strings, sep);
+     printf("%s", result);
+    
+     return (0);
+}
