@@ -1,0 +1,47 @@
+
+#include <unistd.h>
+
+int	ft_strcmp(char *s1, char *s2)
+{
+	int	i;
+
+	i = 0;
+	while (s1[i] != '\0' && s1[i] == s2[i])
+	{
+		i++;
+	}
+	return (s1[i] - s2[i]);
+}
+
+void	ft_swap(int *a, int *b)
+{
+	int	temp;
+
+	temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+int	main(int argc, char *argv[])
+{
+	if (argc >1)
+	{
+		int	i;
+		int j;
+		int	ascii[][];
+
+    	j = 1;
+	{
+		while (j < argc)
+        {
+            i = 0;
+            while (argv[j][i] != '\0')
+            {
+				int ascii[j][i]	= ft_putchar(argv[j][i]);
+				i++;
+            }
+		ft_putchar('\n');
+        j++;
+        }
+	}	}
+}
