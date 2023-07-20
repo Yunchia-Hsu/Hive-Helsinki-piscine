@@ -1,0 +1,113 @@
+#include <unistd.h>
+#include <stdio.h>
+void ft_putstr(char *str)
+{
+    int  i;
+    i = 0;
+    while(str[i] != '\0')
+   {
+        write(1, &str[i], 1);
+        i++;
+   }
+}
+int if_string_is_separator(char c, char *charset)
+{
+    int i;
+    i = 0;
+    while(charset[i])
+    {
+        if( c == charset[i])
+            return (1);
+        i++;
+    }
+    if (c == '\0')
+        return (1);  //why?   '\0' 也视为分隔符，因为它是字符串的结束符
+    return (0);
+}
+int count_string(char *str, char *charset)
+{
+    int i;
+    int count_string;
+    i = 0;
+    count_string = 0;
+    while (str[i] != '\0')
+    {
+        if (if_string_is_separator(str[i + 1], charset) == 1  //whye not charset[i + 1]?
+                && if_string_is_separator(str[i], charset) == 0)
+            count_string++;
+        i++;
+    }
+    return (count_string);
+}
+char *write_word(char *result, char *str, char *charset)
+{
+    int i;
+    int j;
+    i = 0;
+    j = 0;
+    while (str[i])
+    {
+        while (if_string_is_separator(str[i], charset) == 1)
+            i++;
+        while (if_string_is_separator(str[i], charset) == 0)
+            result[j++] = str[i++];
+        break ;
+    }
+    result[j] = '\0'; // 添加字符串结束符
+    return(result);
+}
+char **write_string_to_result(char **result, char *str, char *charset)
+{
+    int i;
+    int j;
+    int k;
+    i = 0;
+    k = 0;
+    j = 0;
+    while (str[i])
+    {
+        if(if_string_is_separator(str[i], charset) == 1)
+            i++;
+        else
+        {
+                while (if_string_is_separator(str[i+j], charset) == 0)
+                    j++;
+                result[k] = malloc((j + 1) * sizeof(char));
+                if (result[k] == NULL)
+                    return (NULL);
+                result[k] = write_word(result[k], str + i, charset);
+                i = i + j;
+                j = 0;
+                k++;
+        }
+    }
+    return (result);
+}
+char **ft_split(char *str, char *charset)
+{
+    int         i;
+    char **result;
+    i = count_string(str, charset);
+    result = malloc((i + 1) * sizeof(char *));
+    if (result == NULL)
+        return (NULL);
+    result = write_string_to_result(result, str, charset);
+    result[i] = 0;
+    return (result);
+}
+int     main(void)
+{
+    char    *str = "happyxxcade";
+    char    *charset = "xx";
+    char    **arr;
+    int     i;
+    i = 0;
+    arr = ft_split(str, charset);
+    while (arr[i] != 0)
+    {
+        ft_putstr(arr[i]);
+        write(1, "\n", 1);
+        i++;
+    }
+    return (0);
+}
