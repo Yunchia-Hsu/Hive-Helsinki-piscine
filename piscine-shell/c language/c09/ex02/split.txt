@@ -51,8 +51,8 @@ char *write_word(char *result, char *str, char *charset)
             i++;
         while (if_string_is_separator(str[i], charset) == 0)
             result[j++] = str[i++];
-        break ;
-    }
+        break ;//语句会导致内部循环结束，所以只会执行一次非分隔符的复制操作。
+                 //因此，这个内部循环实际上只会执行一次。    }
     result[j] = '\0'; // 添加字符串结束符
     return(result);
 }
